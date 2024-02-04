@@ -1,0 +1,91 @@
+body {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f7e6e6;
+    background-image: url('D:/Proposal/IMG_0876.JPG');
+    background-size: cover;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
+}
+
+.container {
+     text-align: center;
+     color: #fff;
+     position: relative; /* Set the position to relative for absolute positioning of hearts */
+     z-index: 2;
+}
+
+.content {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.8); /* Add transparency to the content background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-family: 'Arial', sans-serif;
+    color: #ff5252;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+p {
+    font-family: 'monospace;', sans-serif;
+    color: #000000;
+    font-size: 15px;
+}
+
+/* Heart Animation */
+@keyframes heartAnimation {
+    0% {
+        transform: translateY(0) rotate(45deg);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-200px) rotate(45deg);
+        opacity: 0;
+    }
+}
+
+.heart {
+    position: absolute;
+    font-size: 20px; /* Adjust font size as needed */
+    color: red; /* Heart color */
+    animation: heartAnimation 2s linear infinite; /* Adjust animation duration as needed */
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+
+#yesButton {
+    background-color: #4caf50;
+    color: #fff;
+    margin-right: 10px;
+}
+
+#noButton {
+    position: absolute;
+    background-color: #ff5252;
+    color: #fff;
+}
